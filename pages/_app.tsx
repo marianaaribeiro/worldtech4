@@ -33,7 +33,7 @@ export default function MyApp(props: AppProps) {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=HK+Grotesk:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 `,

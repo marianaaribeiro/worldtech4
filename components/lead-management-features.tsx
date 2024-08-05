@@ -16,7 +16,7 @@ const Pattern = styled.div`
   border: 0px solid var(--color-deepskyblue-400);
   box-sizing: border-box;
 `;
-const LeadIcon = styled.div`
+const IconWrapper = styled.div`
   height: 32px;
   width: 21px;
   display: flex;
@@ -45,7 +45,7 @@ const GuideHelpsCompanies = styled.div`
   color: var(--color-dimgray-200);
   display: inline-block;
 `;
-const Content2 = styled.div`
+const Content4 = styled.div`
   height: 110px;
   width: 474.7px;
   display: flex;
@@ -88,13 +88,13 @@ const LeadManagementFeatures: NextPage<LeadManagementFeaturesType> = ({
   return (
     <LeadManagementFeaturesRoot className={className}>
       <Text1>
-        <LeadIcon>
+        <IconWrapper>
           <Pattern />
-        </LeadIcon>
-        <Content2>
+        </IconWrapper>
+        <Content4>
           <LeadGeneration>{leadGeneration}</LeadGeneration>
           <GuideHelpsCompanies>{guideHelpsCompaniesIncrea}</GuideHelpsCompanies>
-        </Content2>
+        </Content4>
       </Text1>
     </LeadManagementFeaturesRoot>
   );

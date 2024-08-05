@@ -21,7 +21,7 @@ const Pattern = styled.div`
   border: 0px solid var(--color-deepskyblue-400);
   box-sizing: border-box;
 `;
-const Details = styled.div`
+const PointContent = styled.div`
   height: 29px;
   width: 21px;
   display: flex;
@@ -45,7 +45,7 @@ const OSeuLogotipo = styled.div<{
   display: ${(p) => p.propDisplay}
   min-width: ${(p) => p.propMinWidth}
 `;
-const Content2 = styled.div`
+const Content4 = styled.div`
   height: 40px;
   width: 411px;
   display: flex;
@@ -89,14 +89,14 @@ const PointsContent: NextPage<PointsContentType> = ({
   return (
     <PointsContentRoot className={className}>
       <Text1>
-        <Details>
+        <PointContent>
           <Pattern />
-        </Details>
-        <Content2>
+        </PointContent>
+        <Content4>
           <OSeuLogotipo propDisplay={propDisplay} propMinWidth={propMinWidth}>
             {oSeuLogotipoPersonalizado}
           </OSeuLogotipo>
-        </Content2>
+        </Content4>
       </Text1>
     </PointsContentRoot>
   );

@@ -28,7 +28,16 @@ const Home = styled.div`
   text-transform: capitalize;
   font-weight: 500;
   display: inline-block;
-  flex-shrink: 0;
+`;
+const HomeWrapper = styled.div`
+  height: 44px;
+  width: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs) 0px 0px;
+  box-sizing: border-box;
 `;
 const QuemSomos = styled.div`
   width: 130px;
@@ -37,8 +46,17 @@ const QuemSomos = styled.div`
   text-transform: capitalize;
   font-weight: 500;
   display: inline-block;
-  flex-shrink: 0;
   z-index: 3;
+`;
+const QuemSomosWrapper = styled.div`
+  height: 44px;
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs) 0px 0px;
+  box-sizing: border-box;
 `;
 const Produtos = styled.div`
   width: 82px;
@@ -47,8 +65,17 @@ const Produtos = styled.div`
   text-transform: capitalize;
   font-weight: 500;
   display: inline-block;
-  flex-shrink: 0;
   z-index: 3;
+`;
+const ProdutosWrapper = styled.div`
+  height: 44px;
+  width: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs) 0px 0px;
+  box-sizing: border-box;
 `;
 const Tecnologias = styled.div`
   width: 108px;
@@ -57,20 +84,10 @@ const Tecnologias = styled.div`
   text-transform: capitalize;
   font-weight: 500;
   display: inline-block;
-  flex-shrink: 0;
 `;
-const MenuContent = styled.div`
-  width: 527px;
-  height: 32px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-26xl);
-`;
-const SubMenu = styled.div`
+const TecnologiasWrapper = styled.div`
   height: 44px;
-  width: 527px;
+  width: 108px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -79,22 +96,21 @@ const SubMenu = styled.div`
   box-sizing: border-box;
 `;
 const Clientes = styled.div`
-  width: 69.1px;
+  width: 75px;
   position: relative;
   line-height: 160%;
   text-transform: capitalize;
   font-weight: 500;
   display: inline-block;
-  z-index: 3;
 `;
-const ClientButton = styled.div`
+const ClientesWrapper = styled.div`
   height: 44px;
   width: 75px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-xs) var(--padding-7xs-9) 0px 0px;
+  padding: var(--padding-xs) 0px 0px;
   box-sizing: border-box;
 `;
 const Contato = styled.div`
@@ -120,7 +136,7 @@ const Button1 = styled.div`
   cursor: pointer;
   color: var(--white);
 `;
-const MenuContainer = styled.div`
+const FrameParent = styled.div`
   height: 56px;
   width: 839px;
   display: flex;
@@ -129,7 +145,7 @@ const MenuContainer = styled.div`
   justify-content: flex-start;
   gap: var(--gap-26xl);
 `;
-const LeftMenu = styled.div`
+const HomeContentInner = styled.div`
   width: 993.3px;
   height: 56px;
   display: flex;
@@ -163,6 +179,18 @@ const Tecnologias1 = styled.div`
   display: inline-block;
   z-index: 3;
 `;
+const Clientes1 = styled.div`
+  width: 69.1px;
+  position: absolute;
+  margin: 0 !important;
+  top: 189px;
+  right: 431.9px;
+  line-height: 160%;
+  text-transform: capitalize;
+  font-weight: 500;
+  display: inline-block;
+  z-index: 3;
+`;
 const Contato1 = styled.div`
   position: relative;
   line-height: 160%;
@@ -177,7 +205,7 @@ const Button2 = styled.div`
   align-items: center;
   justify-content: center;
   padding: var(--padding-xs) var(--padding-19xl);
-  z-index: 4;
+  z-index: 5;
   color: var(--white);
 `;
 const QuemSomos1 = styled.div`
@@ -190,7 +218,7 @@ const QuemSomos1 = styled.div`
   text-transform: capitalize;
   font-weight: 500;
   display: inline-block;
-  z-index: 5;
+  z-index: 6;
 `;
 const Produtos1 = styled.div`
   width: 82px;
@@ -198,18 +226,6 @@ const Produtos1 = styled.div`
   margin: 0 !important;
   top: 189px;
   left: 659px;
-  line-height: 160%;
-  text-transform: capitalize;
-  font-weight: 500;
-  display: inline-block;
-  z-index: 6;
-`;
-const Clientes1 = styled.div`
-  width: 75px;
-  position: absolute;
-  margin: 0 !important;
-  top: 189px;
-  right: 426px;
   line-height: 160%;
   text-transform: capitalize;
   font-weight: 500;
@@ -493,7 +509,7 @@ const Icon1 = styled.img`
   object-fit: contain;
   z-index: 9;
 `;
-const RightContent = styled.div`
+const Parent1 = styled.div`
   width: 1245.3px;
   height: 672.9px;
   position: relative;
@@ -530,33 +546,37 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
   return (
     <HomeContentRoot className={className}>
       <BackgroundIcon alt="" src="/background1@2x.png" />
-      <LeftMenu>
-        <MenuContainer>
-          <SubMenu>
-            <MenuContent>
-              <Home>Home</Home>
-              <QuemSomos>Quem Somos</QuemSomos>
-              <Produtos>produtos</Produtos>
-              <Tecnologias>tecnologias</Tecnologias>
-            </MenuContent>
-          </SubMenu>
-          <ClientButton>
+      <HomeContentInner>
+        <FrameParent>
+          <HomeWrapper>
+            <Home>Home</Home>
+          </HomeWrapper>
+          <QuemSomosWrapper>
+            <QuemSomos>Quem Somos</QuemSomos>
+          </QuemSomosWrapper>
+          <ProdutosWrapper>
+            <Produtos>produtos</Produtos>
+          </ProdutosWrapper>
+          <TecnologiasWrapper>
+            <Tecnologias>tecnologias</Tecnologias>
+          </TecnologiasWrapper>
+          <ClientesWrapper>
             <Clientes>Clientes</Clientes>
-          </ClientButton>
+          </ClientesWrapper>
           <Button1 onClick={onButtonContainerClick}>
             <Contato>Contato</Contato>
           </Button1>
-        </MenuContainer>
-      </LeftMenu>
+        </FrameParent>
+      </HomeContentInner>
       <Home1>Home</Home1>
       <Tecnologias1>tecnologias</Tecnologias1>
+      <Clientes1>Clientes</Clientes1>
       <Button2>
         <Contato1>Contato</Contato1>
       </Button2>
       <QuemSomos1>Quem Somos</QuemSomos1>
       <Produtos1>produtos</Produtos1>
-      <Clientes1>Clientes</Clientes1>
-      <RightContent>
+      <Parent1>
         <Div1>
           <Background />
           <PatternIcon alt="" src="/pattern.svg" />
@@ -591,7 +611,7 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
         </Div4>
         <Icon alt="" src="/2@2x.png" />
         <Icon1 alt="" src="/1@2x.png" />
-      </RightContent>
+      </Parent1>
     </HomeContentRoot>
   );
 };

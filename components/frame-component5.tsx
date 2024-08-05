@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { useCallback } from "react";
 import styled from "styled-components";
 
-export type FrameComponent4Type = {
+export type FrameComponent5Type = {
   className?: string;
 };
 
@@ -290,7 +290,7 @@ const BannerImage = styled.div`
   height: 639px;
   z-index: 3;
 `;
-const MainFooterRoot = styled.div`
+const BackgroundParentRoot = styled.div`
   position: absolute;
   top: 103px;
   left: 0px;
@@ -302,7 +302,7 @@ const MainFooterRoot = styled.div`
   font-family: var(--font-jost);
 `;
 
-const FrameComponent4: NextPage<FrameComponent4Type> = ({ className = "" }) => {
+const FrameComponent5: NextPage<FrameComponent5Type> = ({ className = "" }) => {
   const onButtonContainerClick = useCallback(() => {
     const anchor = document.querySelector("[data-scroll-to='rectangle']");
     if (anchor) {
@@ -318,7 +318,7 @@ const FrameComponent4: NextPage<FrameComponent4Type> = ({ className = "" }) => {
   }, []);
 
   return (
-    <MainFooterRoot className={className}>
+    <BackgroundParentRoot className={className}>
       <Background>
         <BackgroundChild />
         <PatternIcon alt="" src="/pattern6.svg" />
@@ -367,8 +367,8 @@ const FrameComponent4: NextPage<FrameComponent4Type> = ({ className = "" }) => {
           <Image1009Icon alt="" src="/image-1009@2x.png" />
         </Image5>
       </BannerImage>
-    </MainFooterRoot>
+    </BackgroundParentRoot>
   );
 };
 
-export default FrameComponent4;
+export default FrameComponent5;

@@ -1,148 +1,136 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
 
-export type Content1Type = {
+export type Content3Type = {
   className?: string;
 };
 
 const BackgroundIcon = styled.img`
-  width: 2200px;
-  position: relative;
+  width: 1440px;
   height: 702px;
+  position: relative;
   display: none;
+  max-width: 100%;
 `;
-const LogoIcon = styled.img`
-  height: 55px;
-  width: 55px;
+const CompanyTechSystem = styled.h1`
+  margin: 0;
+  width: 473px;
   position: relative;
-  object-fit: cover;
-`;
-const CompanyTechSystem = styled.b`
-  width: 415px;
-  height: 52px;
-  position: relative;
-  line-height: 129.7%;
+  font-size: inherit;
+  line-height: 52px;
+  font-weight: 700;
+  font-family: inherit;
   display: inline-block;
-`;
-const CompanyNameFooter = styled.div`
-  height: 53.5px;
-  width: 415px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-11xs-5) 0px 0px;
-  box-sizing: border-box;
+  flex-shrink: 0;
+  max-width: 398%;
+  @media screen and (max-width: 1050px) {
+    font-size: var(--font-size-13xl);
+    line-height: 42px;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: var(--h4-size);
+    line-height: 31px;
+  }
 `;
 const Logo = styled.div`
-  height: ;
-  width: 482px;
+  width: 119px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: var(--gap-5xs);
+  padding: 0px 0px 0px 0px;
+  box-sizing: border-box;
 `;
 const InstagramIcon = styled.img`
   height: 21.4px;
   width: 22.3px;
   position: relative;
+  min-height: 21px;
+  flex-shrink: 0;
 `;
 const FacebookIcon = styled.img`
   height: 21.4px;
   width: 23px;
   position: relative;
+  min-height: 21px;
+  flex-shrink: 0;
 `;
 const TwiterIcon = styled.img`
-  width: 21.5px;
   height: 17.2px;
-  position: relative;
-`;
-const TwitterContainer = styled.div`
-  height: 19.4px;
   width: 21.5px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0px 0px var(--padding-10xs-2);
-  box-sizing: border-box;
+  position: relative;
+  flex-shrink: 0;
 `;
 const LinkedInIcon = styled.img`
   height: 21.7px;
   width: 21.7px;
   position: relative;
+  min-height: 22px;
+  flex-shrink: 0;
 `;
 const YoutubeIcon = styled.img`
-  width: 26px;
   height: 19px;
-  position: relative;
-`;
-const YoutubeContainer = styled.div`
-  height: 20.3px;
   width: 26px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0px 0px var(--padding-11xs-3);
-  box-sizing: border-box;
+  position: relative;
+  flex-shrink: 0;
 `;
 const Follow = styled.div`
-  width: 222.5px;
-  height: 21.7px;
+  width: 0px;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-end;
   gap: var(--gap-8xl);
 `;
-const SocialLinks = styled.div`
-  height: 38.3px;
-  width: 222.5px;
+const FooterSocial = styled.div`
+  width: 0px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-base-6) 0px 0px;
+  padding: var(--padding-base-1) 0px 0px;
   box-sizing: border-box;
 `;
 const Logo1 = styled.div`
-  width: 1636px;
-  height: ;
+  align-self: stretch;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0px var(--padding-5xs-7) 0px var(--padding-5xs-8);
-  box-sizing: border-box;
-  gap: var(--gap-897xl);
+  justify-content: space-between;
+  padding: 0px var(--padding-2xs) 0px var(--padding-3xs);
+  gap: var(--gap-xl);
   z-index: 1;
 `;
 const LineIcon = styled.img`
   height: 392px;
-  width: 1604.2px;
+  width: 1050px;
   position: absolute;
   margin: 0 !important;
-  right: -0.3px;
+  right: -0.1px;
   bottom: -25px;
   z-index: 1;
 `;
 const Empresa = styled.div`
-  width: 95px;
   position: relative;
   line-height: 133.2%;
   text-transform: capitalize;
   font-weight: 500;
   display: inline-block;
+  min-width: 95px;
+  @media screen and (max-width: 450px) {
+    font-size: var(--font-size-xl);
+    line-height: 27px;
+  }
 `;
 const Sobre = styled.div`
-  width: 53px;
-  height: 29px;
   position: relative;
   text-transform: capitalize;
   font-weight: 500;
   display: inline-block;
+  min-width: 53px;
+  @media screen and (max-width: 450px) {
+    font-size: var(--font-size-base);
+  }
 `;
 const Testeminhos = styled.div`
   position: absolute;
@@ -151,18 +139,23 @@ const Testeminhos = styled.div`
   right: -17px;
   text-transform: capitalize;
   font-weight: 500;
+  display: inline-block;
+  min-width: 107px;
+  @media screen and (max-width: 450px) {
+    font-size: var(--font-size-base);
+  }
 `;
 const Oramento = styled.div`
-  width: 98px;
-  height: 29px;
   position: relative;
   text-transform: capitalize;
   font-weight: 500;
   display: inline-block;
+  min-width: 98px;
+  @media screen and (max-width: 450px) {
+    font-size: var(--font-size-base);
+  }
 `;
 const Link = styled.div`
-  width: 90px;
-  height: ;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -172,8 +165,6 @@ const Link = styled.div`
   font-size: var(--font-size-xl);
 `;
 const UsefulLink = styled.div`
-  height: 210px;
-  width: 95px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -181,40 +172,49 @@ const UsefulLink = styled.div`
   gap: var(--gap-49xl);
 `;
 const Servios = styled.div`
-  width: 94px;
   position: relative;
   line-height: 133.2%;
   text-transform: capitalize;
   font-weight: 500;
   display: inline-block;
+  min-width: 94px;
+  @media screen and (max-width: 450px) {
+    font-size: var(--font-size-xl);
+    line-height: 27px;
+  }
 `;
 const Produtos = styled.div`
-  width: 78px;
-  height: 29px;
   position: relative;
   text-transform: capitalize;
   font-weight: 500;
   display: inline-block;
+  min-width: 78px;
+  @media screen and (max-width: 450px) {
+    font-size: var(--font-size-base);
+  }
 `;
 const NossaEquipe = styled.div`
-  width: 122px;
-  height: 29px;
   position: relative;
   text-transform: capitalize;
   font-weight: 500;
   display: inline-block;
+  min-width: 122px;
+  @media screen and (max-width: 450px) {
+    font-size: var(--font-size-base);
+  }
 `;
 const Tecnologia = styled.div`
-  width: 95px;
-  height: 29px;
   position: relative;
   text-transform: capitalize;
   font-weight: 500;
   display: inline-block;
+  min-width: 95px;
+  @media screen and (max-width: 450px) {
+    font-size: var(--font-size-base);
+  }
 `;
 const Service = styled.div`
-  width: 122px;
-  height: 109px;
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -223,57 +223,70 @@ const Service = styled.div`
   font-size: var(--font-size-xl);
 `;
 const Service1 = styled.div`
-  height: 210px;
-  width: 122px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--gap-49xl);
+  min-width: 79px;
 `;
-const LinkCategories = styled.div`
-  height: 210px;
-  width: 374px;
+const LinksColumn = styled.div`
+  width: 334px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: var(--gap-138xl);
+  gap: var(--gap-98xl);
+  min-width: 334px;
+  max-width: 100%;
+  @media screen and (max-width: 750px) {
+    flex: 1;
+  }
+  @media screen and (max-width: 450px) {
+    flex-wrap: wrap;
+    gap: var(--gap-39xl);
+  }
 `;
 const ContactUs = styled.div`
-  width: 118px;
   position: relative;
   line-height: 133.2%;
   text-transform: capitalize;
   font-weight: 500;
   display: inline-block;
+  min-width: 118px;
+  @media screen and (max-width: 450px) {
+    font-size: var(--font-size-xl);
+    line-height: 27px;
+  }
 `;
 const P = styled.p`
   margin: 0;
 `;
-const MailprimarilycomLocalidade = styled.div`
-  height: 96px;
-  width: 170px;
+const MaliitcontactgmailcomLocal = styled.div`
   position: relative;
   line-height: 160%;
   text-transform: capitalize;
-  display: inline-block;
+  @media screen and (max-width: 450px) {
+    font-size: var(--font-size-base);
+    line-height: 26px;
+  }
 `;
-const ContactAddress = styled.div`
-  height: 134px;
-  width: 266px;
+const ContactDetails = styled.div`
   border-radius: var(--br-xl);
   border: 1px solid var(--color-dimgray-100);
-  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-lgi) var(--padding-29xl);
+  padding: var(--padding-mid) var(--padding-28xl);
+  @media screen and (max-width: 450px) {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
 `;
 const Contatct = styled.div`
-  width: 266px;
-  height: 134px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -281,148 +294,171 @@ const Contatct = styled.div`
   font-size: var(--font-size-xl);
 `;
 const ContactUs1 = styled.div`
-  height: 226px;
-  width: 266px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--gap-40xl);
+  min-width: 320px;
+  @media screen and (max-width: 750px) {
+    flex: 1;
+  }
+  @media screen and (max-width: 450px) {
+    gap: var(--gap-10xl);
+  }
 `;
 const Text1 = styled.div`
-  height: ;
-  width: 803px;
+  flex: 1;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-138xl);
+  justify-content: space-between;
+  padding: 0px var(--padding-13xl) 0px 0px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  max-width: 100%;
+  gap: var(--gap-xl);
+  @media screen and (max-width: 750px) {
+    flex-wrap: wrap;
+    min-width: 100%;
+  }
 `;
 const ImagesIcon = styled.img`
   width: 299.2px;
   height: 263px;
-  position: relative;
-  object-fit: contain;
+  position: absolute;
+  margin: 0 !important;
+  bottom: 0px;
+  left: -92.2px;
+  object-fit: cover;
 `;
 const LatestNews = styled.div`
   height: 350px;
-  width: 777px;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
-  flex-shrink: 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
 `;
 const News = styled.div`
-  height: ;
-  width: 557px;
+  width: 207px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0px 0px 0px 0px;
-  box-sizing: border-box;
+  flex-shrink: 0;
 `;
 const Content4 = styled.div`
-  height: 350px;
-  width: 1605.3px;
+  flex: 1;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--gap-22xl);
+  max-width: 100%;
   z-index: 2;
+  @media screen and (max-width: 750px) {
+    gap: var(--gap-xl);
+  }
 `;
 const FooterLinks = styled.div`
-  height: 350px;
-  width: 1605.3px;
+  align-self: stretch;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
   position: relative;
-`;
-const FooterInfo = styled.div`
-  width: 1612.8px;
-  height: 350px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0px 0px 0px var(--padding-5xs-5);
-  box-sizing: border-box;
+  max-width: 100%;
   font-size: var(--font-size-6xl);
 `;
+const FooterContent = styled.div`
+  width: 1056px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-40xl);
+  max-width: 100%;
+  @media screen and (max-width: 750px) {
+    gap: var(--gap-10xl);
+  }
+`;
 const CompanyTechSystem1 = styled.div`
-  width: 558px;
+  width: 365.3px;
   position: relative;
   line-height: 160%;
   text-transform: capitalize;
   display: inline-block;
   flex-shrink: 0;
+  max-width: 100%;
   z-index: 1;
+  @media screen and (max-width: 450px) {
+    font-size: var(--font-size-base);
+    line-height: 26px;
+  }
 `;
 const Copyright = styled.div`
-  width: 1090.6px;
-  height: 32px;
+  width: 1056px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0px 0px 0px var(--padding-513xl-6);
+  justify-content: center;
+  padding: 0px 0px 0px var(--padding-5xs);
   box-sizing: border-box;
+  max-width: 100%;
   text-align: center;
   font-size: var(--font-size-xl);
 `;
-const ContentRoot = styled.div`
-  width: 2200px;
-  height: 702px;
+const ContentRoot = styled.footer`
+  align-self: stretch;
   background-color: var(--color-gray-100);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  padding: var(--padding-106xl) var(--padding-256xl) var(--padding-13xl)
-    var(--padding-270xl);
+  padding: var(--padding-106xl) var(--padding-7xl) var(--padding-13xl)
+    var(--padding-xl);
   box-sizing: border-box;
-  gap: var(--gap-35xl);
+  gap: var(--gap-33xl);
+  max-width: 100%;
   text-align: left;
   font-size: var(--header-2-size);
   color: var(--white);
   font-family: var(--font-jost);
+  @media screen and (max-width: 750px) {
+    gap: var(--gap-7xl);
+    padding-top: var(--padding-62xl);
+    padding-bottom: var(--padding-2xl);
+    box-sizing: border-box;
+  }
 `;
 
-const Content1: NextPage<Content1Type> = ({ className = "" }) => {
+const Content3: NextPage<Content3Type> = ({ className = "" }) => {
   return (
     <ContentRoot className={className}>
       <BackgroundIcon alt="" src="/background.svg" />
-      <Logo1>
-        <Logo>
-          <LogoIcon alt="" src="/logo-1@2x.png" />
-          <CompanyNameFooter>
+      <FooterContent>
+        <Logo1>
+          <Logo>
             <CompanyTechSystem>Company Tech System</CompanyTechSystem>
-          </CompanyNameFooter>
-        </Logo>
-        <SocialLinks>
-          <Follow>
-            <InstagramIcon alt="" src="/instagram1.svg" />
-            <FacebookIcon alt="" src="/facebook1.svg" />
-            <TwitterContainer>
-              <TwiterIcon alt="" src="/twiter1.svg" />
-            </TwitterContainer>
-            <LinkedInIcon alt="" src="/linked-in1.svg" />
-            <YoutubeContainer>
-              <YoutubeIcon alt="" src="/youtube1.svg" />
-            </YoutubeContainer>
-          </Follow>
-        </SocialLinks>
-      </Logo1>
-      <FooterInfo>
+          </Logo>
+          <FooterSocial>
+            <Follow>
+              <InstagramIcon loading="lazy" alt="" src="/instagram.svg" />
+              <FacebookIcon loading="lazy" alt="" src="/facebook.svg" />
+              <TwiterIcon loading="lazy" alt="" src="/twiter.svg" />
+              <LinkedInIcon loading="lazy" alt="" src="/linked-in.svg" />
+              <YoutubeIcon loading="lazy" alt="" src="/youtube.svg" />
+            </Follow>
+          </FooterSocial>
+        </Logo1>
         <FooterLinks>
           <LineIcon alt="" src="/line.svg" />
           <Content4>
             <Text1>
-              <LinkCategories>
+              <LinksColumn>
                 <UsefulLink>
                   <Empresa>Empresa</Empresa>
                   <Link>
@@ -439,33 +475,33 @@ const Content1: NextPage<Content1Type> = ({ className = "" }) => {
                     <Tecnologia>Tecnologia</Tecnologia>
                   </Service>
                 </Service1>
-              </LinkCategories>
-              <ContactUs1>
+              </LinksColumn>
+              <ContactUs1 data-scroll-to="contactUsContainer">
                 <ContactUs>Contact Us</ContactUs>
                 <Contatct>
-                  <ContactAddress>
-                    <MailprimarilycomLocalidade>
-                      <P>+3255 456 789</P>
-                      <P>mail@primarily.com</P>
+                  <ContactDetails>
+                    <MaliitcontactgmailcomLocal>
+                      <P>+351 966 659 669</P>
+                      <P>mali.itcontact@gmail.com</P>
                       <P>Localidade: Europa</P>
-                    </MailprimarilycomLocalidade>
-                  </ContactAddress>
+                    </MaliitcontactgmailcomLocal>
+                  </ContactDetails>
                 </Contatct>
               </ContactUs1>
             </Text1>
             <News>
               <LatestNews>
-                <ImagesIcon alt="" src="/images2@2x.png" />
+                <ImagesIcon loading="lazy" alt="" src="/images@2x.png" />
               </LatestNews>
             </News>
           </Content4>
         </FooterLinks>
-      </FooterInfo>
+      </FooterContent>
       <Copyright>
-        <CompanyTechSystem1>2020 | Company Tech System</CompanyTechSystem1>
+        <CompanyTechSystem1>2024 | Company Tech System</CompanyTechSystem1>
       </Copyright>
     </ContentRoot>
   );
 };
 
-export default Content1;
+export default Content3;
